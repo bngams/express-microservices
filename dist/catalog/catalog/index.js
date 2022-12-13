@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv_1 = require("dotenv");
+const express = require("express");
+(0, dotenv_1.config)();
+const app = express();
+const port = 8001;
+const router = require("./route");
+app.use(router);
+app.listen(port, function () { console.log('Server listening on: ' + port); });

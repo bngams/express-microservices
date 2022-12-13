@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  service_1:
+    image: api-gateway
+    container_name : api-gateway_container
+    env_file:
+      - .env.docker.local
+    ports:
+      - 8000:8000
+    restart: always
+  
+  service_2:
+    image: catalog
+    container_name : catalogue_container
+    ports:
+      - 8001:8001
+    restart: always
+    env_file:
+      - .env.docker.local
+  
+  service_3:
+    image: movies
+    container_name : movie_container
+    ports:
+      - 8002:8002
+    restart: always
+    env_file:
+      - .env.docker.local
+   

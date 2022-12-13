@@ -1,0 +1,14 @@
+FROM node:16
+
+WORKDIR /var/www/Api/Service_2
+
+COPY . .
+
+COPY ../../package.json /var/www/Api/Service_2/
+
+RUN npm i
+
+RUN npx tsc
+
+CMD npm run start-prod-catalog
+
