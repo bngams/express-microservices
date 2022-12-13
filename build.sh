@@ -12,6 +12,6 @@ echo "Image anime creation"
 docker build -t animes -f animes/Dockerfile .
 echo "Image anime create"
 
-echo "Lancement des containaires"
+echo "Lancement des Conteneurs"
 docker-compose up -d 
-echo "Containaires lancés"
+echo "Conteneurs lancés"
