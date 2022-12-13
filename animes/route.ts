@@ -4,7 +4,7 @@ import { Controller } from './controller';
 
 let router = express.Router(); 
 
-router.get("/movie_info/:id", (req: Request, res: Response) => {
+router.get("/anime_info/:id", (req: Request, res: Response) => {
     const httpRequest = Controller.getDetails(req.params.id);
     httpRequest.then(result => {
         res.send(result.data);

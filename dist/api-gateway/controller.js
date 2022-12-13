@@ -16,7 +16,7 @@ class Controller {
         return axios_1.default.get(`${process.env.ALL_ANIME_CATALOG_SERVICE}`);
     }
     static getCatalogueManga() {
-        return axios_1.default.get(`${process.env.ALL_MOVIE_CATALOG_SERVICE}`);
+        return axios_1.default.get(`${process.env.ALL_ANIME_CATALOG_SERVICE}`);
     }
 }
 exports.Controller = Controller;

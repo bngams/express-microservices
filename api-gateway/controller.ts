@@ -14,7 +14,7 @@ export class Controller {
   }
 
   static getCatalogueManga():Promise<AxiosResponse>{
-    return axios.get(`${process.env.ALL_MOVIE_CATALOG_SERVICE}`) 
+    return axios.get(`${process.env.ALL_ANIME_CATALOG_SERVICE}`) 
   }
 
 }

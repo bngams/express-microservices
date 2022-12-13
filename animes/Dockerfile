@@ -10,4 +10,4 @@ RUN npm i
 
 RUN npx tsc
 
-CMD npm run start-prod-movies
+CMD npm run start-prod-animes

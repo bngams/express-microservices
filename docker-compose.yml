@@ -20,8 +20,8 @@ services:
       - .env.docker.local
   
   service_3:
-    image: movies
-    container_name : movie_container
+    image: animes
+    container_name : anime_container
     ports:
       - 8002:8002
     restart: always

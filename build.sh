@@ -8,9 +8,9 @@ echo "Image catalogue creation"
 docker build -t catalog -f catalog/Dockerfile .
 echo "Image catalogue create"
 
-echo "Image movie creation"
-docker build -t movies -f movies/Dockerfile .
-echo "Image movie create"
+echo "Image anime creation"
+docker build -t animes -f animes/Dockerfile .
+echo "Image anime create"
 
 echo "Lancement des containaires"
 docker-compose up -d 

@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "concurrently \"npx tsc --watch\" \"nodemon dist/api-gateway/index.js\" \"nodemon dist/catalog/index.js\" \"nodemon dist/movies/index.js\"",
+    "start-dev": "concurrently \"npx tsc --watch\" \"nodemon dist/api-gateway/index.js\" \"nodemon dist/catalog/index.js\" \"nodemon dist/animes/index.js\"",
     "start-prod-gateway": "node dist/api-gateway/index.js",
     "start-prod-catalog": "node dist/catalog/index.js",
-    "start-prod-movies": "node dist/movies/index.js"
+    "start-prod-animes": "node dist/animes/index.js"
   },
   "keywords": [],
   "author": "",
