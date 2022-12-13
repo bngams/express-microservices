@@ -1,5 +1,15 @@
 # TP-express
-> TP express avec Boris- 11/2022-12/2022
+> Date : 11/2022 - 12/2022
+> Cours : Choix des technologies et infra
+> Intervenant : Boris NGAMAMBA 
+
+## Description
+
+Tp fait pendant le cours de Boris avec la mise en place d'une api.
+ - Utilisation des bibliothèques express, dotenv, axios, typescript
+ - Conteurisation avec docker
+
+Lien vers la source de donnée que j'ai utilisé : https://www.animenewsnetwork.com/
 
 ## Initialisation
 
