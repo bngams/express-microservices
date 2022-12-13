@@ -1,15 +1,15 @@
 #! /bin/sh
 
 echo "Image gateway creation"
-docker build -t api-gateway -f api-gateway/gateway/Dockerfile .
+docker build -t api-gateway -f api-gateway/Dockerfile .
 echo "Image gateway create"
 
 echo "Image catalogue creation"
-docker build -t catalog -f catalog/catalog/Dockerfile .
+docker build -t catalog -f catalog/Dockerfile .
 echo "Image catalogue create"
 
 echo "Image movie creation"
-docker build -t movies -f movies/movies/Dockerfile .
+docker build -t movies -f movies/Dockerfile .
 echo "Image movie create"
 
 echo "Lancement des containaires"
