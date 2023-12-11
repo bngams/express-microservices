@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = require("dotenv");
 const express = require("express");
-(0, dotenv_1.config)();
+dotenv_1.config();
 const app = express();
 const port = 8002;
 const router = require("./route");

@@ -2,12 +2,9 @@ FROM node:16
 
 WORKDIR /var/www/Api/Service_1
 
-COPY . .
-
-COPY ../../package.json /var/www/Api/Service_1/
-
+COPY package.json .
 RUN npm i
 
-RUN npx tsc
+COPY dist/api-gateway .
 
 CMD npm run start-prod-gateway

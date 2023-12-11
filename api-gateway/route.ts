@@ -4,33 +4,28 @@ import { Router, Request, Response } from 'express';
 import { Controller } from './controller';
 
 import $ = require('jquery');
-
 import xml2js = require('xml2js');
 
+export const router = express.Router(); 
 
-let router = express.Router(); 
-
-router.get("/catalog/anime/:id",(req: Request, res: Response) => {
+router.get("/catalog/anime/:id", (req, res) => {
     const httpRequest = Controller.getAnimeCatalogue(req.params.id); 
     httpRequest.then(result => {
         res.send(result.data)
     })
-        .catch(error => {
-            res.send("Erreur service 1 : "+error).status(500);
-        }) 
-
+    .catch(error => {
+        res.send("Erreur service 1 : "+error).status(500);
+    }) 
 });
 
-router.get("/catalog/manga/:id",(req: Request, res: Response) => {
+router.get("/catalog/manga/:id", (req: Request, res: Response) => {
     const httpRequest = Controller.getMangaCatalogue(req.params.id);
     httpRequest.then(result => {
         res.send(result.data)
-        
     })
-        .catch(error => {
-            res.send("Erreur service 1 : "+error).status(500);
-        }) 
-
+    .catch(error => {
+        res.send("Erreur service 1 : "+error).status(500);
+    }) 
 });
 
 router.get("/catalog/anime",(req: Request, res: Response) => {
@@ -43,9 +38,9 @@ router.get("/catalog/anime",(req: Request, res: Response) => {
             res.send(JSON.stringify(jsonFile, null, 4))
         })
     })
-        .catch(error => {
-            res.send("Erreur service 1 : "+error).status(500);
-        }) 
+    .catch(error => {
+        res.send("Erreur service 1 : "+error).status(500);
+    }) 
 
 });
 
@@ -59,15 +54,12 @@ router.get("/catalog/manga",(req: Request, res: Response) => {
             res.send(JSON.stringify(jsonFile, null, 4))
         })
     })
-        .catch(error => {
-            res.send("Erreur service 1 : "+error).status(500);
-        }) 
+    .catch(error => {
+        res.send("Erreur service 1 : "+error).status(500);
+    }) 
 
 });
 
 router.get("/catalog",(req: Request, res: Response) => {
     res.send("Bienvenue dans mon API catalogue MANGA </br> Lien vers l'api : https://cdn.animenewsnetwork.com"); 
-
 });
-
-export = router;

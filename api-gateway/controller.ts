@@ -1,12 +1,13 @@
 import axios, {AxiosResponse } from "axios";
  
 export class Controller {
-  static getAnimeCatalogue(id : string):Promise<AxiosResponse>{
+
+  static getAnimeCatalogue(id : string){
     return axios.get(`${process.env.ANIME_CATALOG_SERVICE}/${id}`) 
   }
 
   static getMangaCatalogue(id : string):Promise<AxiosResponse>{
-    return axios.get(`${process.env.ANIME_CATALOG_SERVICE}/${id}`) 
+    return axios.get(`${process.env.ANIME_CATALOG_SERVICE}/${id}`);
   }
 
   static getCatalogueAnime():Promise<AxiosResponse>{
